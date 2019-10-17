@@ -1,0 +1,6 @@
+src/assets
+src/components
+src/lib
+**/ngmmdebug.js
+dist/
+output.js
