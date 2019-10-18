@@ -37,7 +37,7 @@ module.exports = {
     const loadWxqlogo = (src, key, callback) => {
       const errorImg = defaultImgFn(key) || loadingImg
 
-      if (src && src.match(/https?:\/\/thirdwx\.qlogo\.cn/)) {
+      if (src && src.match(/https?:\/\/(third)?wx\.qlogo\.cn/)) {
         callback(loadingImg, 'loading')
 
         loadImg(src, () => {

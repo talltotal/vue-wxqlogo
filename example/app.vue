@@ -1,9 +1,13 @@
 <template>
     <div id="app">
-        <template v-for="i in 20">
+        <template v-for="i in 10">
+            <img
+                v-lazy="'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJGuGn0prXGbibFeCicxsg53sjYiaHbC2o1KWjaC7ET9DFd4OiawDP19moMmNtOwkWn3JHdTHsAMVTPFQ/132'"
+                :key="i"
+            />
             <img
                 v-lazy="'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJGuGn0prXGbibFeCicxsg53sjYiaHbC2o1KWjaC7ET9DFd4OiawDP19moMmNtOwkWn3JHdTHsAMVTPFQ/132'"
-                :key="i"
+                :key="`${i}-`"
             />
         </template>
     </div>
