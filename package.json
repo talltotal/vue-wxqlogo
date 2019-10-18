@@ -1,11 +1,13 @@
 {
   "name": "vue-wxqlogo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "微信头像异常处理",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "vue-cli-service serve ./example/index.js --mode dev",
+    "dev": "vue-cli-service serve --mode dev",
+    "build": "vue-cli-service build",
+    "demo": "./update-demo.sh",
     "lint": "eslint --ext .js src,example --fix",
     "test": "mocha"
   },

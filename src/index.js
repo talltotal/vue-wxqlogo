@@ -18,7 +18,7 @@ function valueFormatter (value) {
 
 function loadImg (imagePath, success, error) {
   var xhr = new window.XMLHttpRequest()
-  xhr.open('GET', imagePath, true)
+  xhr.open('GET', imagePath.replace(/https?:\/\//, `${window.location.protocol}//`), true)
 
   xhr.onload = function () {
     var desc = this.getResponseHeader('last-modified')

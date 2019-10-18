@@ -1,17 +1,18 @@
 # vue-wxqlogo
 
 微信头像“暂时无法查看”异常处理。
+[demo](https://talltotal.github.io/vue-wxqlogo/)
 
 ## Installation
 
 ```bash
-$ npm install -D vue-wxqlogo
+$ npm install vue-wxqlogo
 ```
 
 OR
 
 ```bash
-$ yarn add -D vue-wxqlogo
+$ yarn add vue-wxqlogo
 ```
 
 
@@ -30,12 +31,12 @@ import VueLazyload from 'vue-lazyload'
  */
 Vue.use(VueWxQlogo, {
   loadingImg: require('@/assets/imgs/loading'),
-  defaultImg (userId) {
+  defaultImg (key) {
     return [
       require('@/assets/imgs/logo/1.png'),
       require('@/assets/imgs/logo/2.png'),
       require('@/assets/imgs/logo/3.png'),
-    ][Number(userId) % 3]
+    ][Number(key) % 3]
   }
 })
 /**
@@ -51,7 +52,7 @@ Vue.use(VueLazyload, {
        * 2. key | <any>
        * 3. handler | <(result: string)=>void>
        */
-      Vue.prototype.$loadWxqlogo(src, userId, (result) => {
+      Vue.prototype.$loadWxqlogo(src, key, (result) => {
         el.setAttribute('src', result)
       })
     }
