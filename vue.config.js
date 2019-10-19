@@ -3,6 +3,7 @@ module.exports = {
   pages: {
     index: {
       entry: './example/index.js',
+      template: './example/index.html',
       title: 'Vue-WXQlogo DEMO'
     }
   }
