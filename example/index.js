@@ -28,16 +28,18 @@ Vue.use(VueWxQlogo, {
 Vue.use(VueLazyload, {
   loading: require('./imgs/loading.svg'),
   adapter: {
-    loaded ({ el, src }) {
+    async loaded ({ el, src }) {
       /**
          * Vue.prototype.$loadWxqlogo
          * 1. src | <string>
          * 2. key | <any>
          * 3. handler | <(result: string)=>void>
          */
-      Vue.prototype.$loadWxqlogo(src, undefined, (result) => {
-        el.setAttribute('src', result)
-      })
+      // Vue.prototype.$loadWxqlogo(src, undefined, (result) => {
+      //   el.setAttribute('src', result)
+      // })
+      const result = await Vue.prototype.$loadWxqlogo(src, undefined)
+      el.setAttribute('src', result)
     }
   }
 })

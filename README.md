@@ -58,6 +58,14 @@ Vue.use(VueLazyload, {
     }
   }
 })
+
+/**
+ * async-await (won't return 'loading' status)
+ */
+async function fun () {
+  const result = await Vue.prototype.$loadWxqlogo(src, key)
+  commit('SET_AVATAR', result)
+}
 ```
 
 template:
