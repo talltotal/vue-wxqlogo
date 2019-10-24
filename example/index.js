@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueWxQlogo from '../src/index.js'
+import VueWxQlogo from '../index.js'
 import VueLazyload from 'vue-lazyload'
 import App from './app.vue'
 
