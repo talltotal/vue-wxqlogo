@@ -75,7 +75,7 @@ module.exports = {
         })
       } else {
         callback(src || errorImg, !src && 'error')
-        return src || errorImg
+        return Promise.resolve(src || errorImg)
       }
     }
     const bind = (el, binding) => {
